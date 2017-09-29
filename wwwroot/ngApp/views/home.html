@@ -1,0 +1,9 @@
+<h2>Home</h2>
+
+<div>
+    <input ng-model="controller.message" type="text">
+    <button ng-click="controller.sendMessage()">Send</button>
+</div>
+<ul>
+    <li ng-repeat="msg in controller.messages track by $index">{{msg}}</li>
+</ul>
