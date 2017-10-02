@@ -4,7 +4,6 @@ myApp.controller("AboutController", AboutController);
 myApp.controller("AccountController", AccountController);
 myApp.controller("ConfirmEmailController", ConfirmEmailController);
 myApp.controller("DashboardController", DashboardController);
-myApp.controller("DragonController", DragonController);
 myApp.controller("DynamicMapController", DynamicMapController);
 myApp.controller("ExternalRegisterController", ExternalRegisterController);
 myApp.controller("HomeController", HomeController);
@@ -13,6 +12,8 @@ myApp.controller("RegisterController", RegisterController);
 myApp.controller("SecretController", SecretController);
 
 myApp.service("$accountService", AccountService);
+myApp.controller("DragonService", DragonService);
+myApp.controller("ProfileService", ProfileService);
 
 myApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
