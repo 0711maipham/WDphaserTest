@@ -12,8 +12,8 @@ myApp.controller("RegisterController", RegisterController);
 myApp.controller("SecretController", SecretController);
 
 myApp.service("$accountService", AccountService);
-myApp.controller("DragonService", DragonService);
-myApp.controller("ProfileService", ProfileService);
+myApp.service("$dragonService", DragonService);
+myApp.service("$profileService", ProfileService);
 
 myApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
@@ -59,7 +59,7 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         }).state("dashboard", {
             url: "/dashboard",
             templateUrl: "/ngApp/views/dashboard.html",
-            // controller: DashboardController,
+            controller: DashboardController,
             controllerAs: "controller"
         });
 
