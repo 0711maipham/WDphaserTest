@@ -1,6 +1,7 @@
 <html ng-app="myApp">
 <head>
-    <title>WanderDragon App</title>
+    <title>WanderDragon App</title> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/w3.css">
     <link rel="stylesheet" href="/css/w3-theme.css">
     <link rel="stylesheet" href="/css/styles.css">
@@ -36,16 +37,21 @@
     <script src="/ngApp/controllers/aboutController.js"></script>
     <script src="/ngApp/controllers/accountController.js"></script>
     <script src="/ngApp/controllers/confirmEmailController.js"></script>
+    <script src="/ngApp/controllers/dynamicMapController.js"></script>
     <script src="/ngApp/controllers/externalRegisterController.js"></script>
     <script src="/ngApp/controllers/homeController.js"></script>
     <script src="/ngApp/controllers/loginController.js"></script>
     <script src="/ngApp/controllers/registerController.js"></script>
     <script src="/ngApp/controllers/secretController.js"></script>
+    
 
     <!-- services -->
     <script src="/ngApp/services/accountService.js"></script>
+    
 
     <script src="/ngApp/app.js"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuc6843tFoduNTipfH_gw6Yp5U0sMCleQ&callback=initMap"></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuc6843tFoduNTipfH_gw6Yp5U0sMCleQ&callback=angular.noop"></script>
 
 </body>
 </html>
