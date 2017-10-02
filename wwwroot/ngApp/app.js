@@ -3,6 +3,8 @@ var myApp = angular.module("myApp", [ "ui.router", "ngResource" ]);
 myApp.controller("AboutController", AboutController);
 myApp.controller("AccountController", AccountController);
 myApp.controller("ConfirmEmailController", ConfirmEmailController);
+myApp.controller("DashboardController", DashboardController);
+myApp.controller("DragonController", DragonController);
 myApp.controller("DynamicMapController", DynamicMapController);
 myApp.controller("ExternalRegisterController", ExternalRegisterController);
 myApp.controller("HomeController", HomeController);
