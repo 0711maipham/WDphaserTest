@@ -5,7 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
+<<<<<<< HEAD
 namespace WanderDragon.Data
+=======
+namespace GoogleMaps.Data
+>>>>>>> origin/TestingStuff
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

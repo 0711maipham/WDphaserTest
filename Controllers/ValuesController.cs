@@ -4,7 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
+<<<<<<< HEAD
 namespace WanderDragon.Controllers
+=======
+namespace GoogleMaps.Controllers
+>>>>>>> origin/TestingStuff
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller

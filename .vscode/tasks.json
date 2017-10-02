@@ -7,7 +7,11 @@
         {
             "taskName": "build",
             "args": [
+<<<<<<< HEAD
                 "${workspaceRoot}/WanderDragon.csproj"
+=======
+                "${workspaceRoot}/GoogleMaps.csproj"
+>>>>>>> origin/TestingStuff
             ],
             "isBuildCommand": true,
             "problemMatcher": "$msCompile"

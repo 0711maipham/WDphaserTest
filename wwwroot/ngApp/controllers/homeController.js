@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿class HomeController {
     constructor($scope) {
         this.messages=[];
@@ -14,4 +15,18 @@
     sendMessage() {
         this.connection.invoke('send', this.message);
     }
+=======
+class HomeController {
+    constructor() {
+        this.message = 'Hello from the about page!';
+    }
+
+
+    // initMap() {
+    //   let map = new google.maps.Map(document.getElementById('map'), {
+    //     center: {lat: -34.397, lng: 150.644},
+    //     zoom: 8
+    //   });
+    // }
+>>>>>>> origin/TestingStuff
 }

@@ -8,7 +8,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
+<<<<<<< HEAD
 namespace WanderDragon
+=======
+namespace GoogleMaps
+>>>>>>> origin/TestingStuff
 {
     public class Program
     {
