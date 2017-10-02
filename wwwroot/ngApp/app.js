@@ -55,6 +55,11 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
             templateUrl: "/ngApp/views/dynamicMap.html",
             controller: DynamicMapController,
             controllerAs: "controller"
+        }).state("dashboard", {
+            url: "/dashboard",
+            templateUrl: "/ngApp/views/dashboard.html",
+            // controller: DashboardController,
+            controllerAs: "controller"
         });
 
     // Handle request for non-existent route
