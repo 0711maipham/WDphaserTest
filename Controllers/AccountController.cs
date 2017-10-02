@@ -9,15 +9,9 @@ using Microsoft.Extensions.Logging;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Security.Claims;
-<<<<<<< HEAD
 using WanderDragon.Data;
 
 namespace WanderDragon.Controllers
-=======
-using GoogleMaps.Data;
-
-namespace GoogleMaps.Controllers
->>>>>>> origin/TestingStuff
 {
     [Produces("application/json")]
     [Route("api/Account")]

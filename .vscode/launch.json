@@ -10,11 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-<<<<<<< HEAD
             "program": "${workspaceRoot}/bin/Debug/netcoreapp2.0/WanderDragon.dll",
-=======
-            "program": "${workspaceRoot}/bin/Debug/netcoreapp2.0/GoogleMaps.dll",
->>>>>>> origin/TestingStuff
             "args": [],
             "cwd": "${workspaceRoot}",
             "stopAtEntry": false,

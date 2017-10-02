@@ -3,10 +3,7 @@ var myApp = angular.module("myApp", [ "ui.router", "ngResource" ]);
 myApp.controller("AboutController", AboutController);
 myApp.controller("AccountController", AccountController);
 myApp.controller("ConfirmEmailController", ConfirmEmailController);
-<<<<<<< HEAD
-=======
 myApp.controller("DynamicMapController", DynamicMapController);
->>>>>>> origin/TestingStuff
 myApp.controller("ExternalRegisterController", ExternalRegisterController);
 myApp.controller("HomeController", HomeController);
 myApp.controller("LoginController", LoginController);
@@ -15,10 +12,6 @@ myApp.controller("SecretController", SecretController);
 
 myApp.service("$accountService", AccountService);
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/TestingStuff
 myApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
     $stateProvider
@@ -55,14 +48,11 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         }).state("notFound", {
             url: "/notFound",
             templateUrl: "/ngApp/views/notFound.html"
-<<<<<<< HEAD
-=======
         }).state("dynamicMap", {
             url: "/travelStart",
             templateUrl: "/ngApp/views/dynamicMap.html",
             controller: DynamicMapController,
             controllerAs: "controller"
->>>>>>> origin/TestingStuff
         });
 
     // Handle request for non-existent route

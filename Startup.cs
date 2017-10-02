@@ -8,25 +8,16 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-<<<<<<< HEAD
 using WanderDragon.Data;
-=======
-using GoogleMaps.Data;
->>>>>>> origin/TestingStuff
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Rewrite;
 using System.Net;
 using Swashbuckle.AspNetCore.Swagger;
-<<<<<<< HEAD
 using Microsoft.AspNetCore.SignalR;
 using WanderDragon.Hubs;
 
 namespace WanderDragon
-=======
-
-namespace GoogleMaps
->>>>>>> origin/TestingStuff
 {
     public class Startup
     {
@@ -48,10 +39,7 @@ namespace GoogleMaps
                 .AddDefaultTokenProviders();
 
             services.AddMvc();
-<<<<<<< HEAD
             services.AddSignalR();
-=======
->>>>>>> origin/TestingStuff
 
             // Register the Swagger generator, defining one or more Swagger documents
             services.AddSwaggerGen(c =>
@@ -91,14 +79,11 @@ namespace GoogleMaps
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             });
-<<<<<<< HEAD
 
             app.UseSignalR(routes =>
             {
                 routes.MapHub<Chat>("chat");
             });
-=======
->>>>>>> origin/TestingStuff
         }
     }
 }

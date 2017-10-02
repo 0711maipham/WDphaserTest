@@ -7,11 +7,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-<<<<<<< HEAD
 namespace WanderDragon.Data.Migrations
-=======
-namespace GoogleMaps.Data.Migrations
->>>>>>> origin/TestingStuff
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
