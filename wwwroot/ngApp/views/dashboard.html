@@ -5,14 +5,14 @@
         <li class="UserNav"><a href="#">Wander</a></li>
     </ul>
 </div>
-<div>
-    <div><img src="images/User.jpg" alt="user"></div>
-   <p>DisplayName</p>
+<div class="theUser">
+    <div><img class="User"src="/images/User.jpg" alt="user"></div>
+   <p>{{controller.user.DisplayName}}</p>
    <p>User Stats</p>
    <div>
         <ul>
-            <li>JoinDate</li>
-            <li>HomeTown</li>
+            <li>Joined On: {{controller.user.JoinDate}}</li>
+            <li>Home: {{controller.user.HomeTown}}</li>
         </ul>
    </div>
    <p>WanderFriends {number}</p>
@@ -21,24 +21,24 @@
        <p>Friend2</p>
    </div>
 </div>
-<div>
+<div class="theDragon">
     <div>
-       <p>Welcome Back DisplayName !!!</p> 
+       <p>Welcome Back {{controller.user.DisplayName}}!!!</p> 
     </div>
     <div>
-        <img src="images/Dragon.jpg" alt="dragon">
+        <img class="Dragon" src="/images/Dragon.jpg" alt="dragon">
     </div>
     <div>
-        <p>DragonName</p>
+        <p>{{controller.dragonStats.Name}}</p>
     </div>
     <p>Dragon Stats</p>
     <div>
         <ul>
-            <li>XP Points</li>
-            <li>Items Collected</li>
-            <li>How Far Traveled</li>
-            <li>Age</li>
-            <li>Trips</li>
+            <li>Curent XP: {{controller.dragonStats.XpPoints}}</li>
+            <li>Total Items: {{controller.dragonStats.Items}}</li>
+            <li>Total Miles Travelled: {{controller.dragonStats.Travelled}} KM</li>
+            <li>Age: {{controller.dragonStats.Age}}</li>
+            <li>Total Trips Taken: {{controller.dragonStats.Trips}}</li>
         </ul>
     </div>
 </div>
