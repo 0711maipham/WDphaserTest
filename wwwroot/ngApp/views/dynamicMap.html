@@ -6,6 +6,6 @@
 <form>
     <label>Flight Path</label>
     <br>
-    <input ng-model="controller.start" type="text">
-    <input ng-model="controller.end" type="text">
+    Destination: <input ng-model="controller.end" type="text"></input>
+    <button ng-click="controller.travelCheck(controller.end)">Let's Go!</button>
 </form>
