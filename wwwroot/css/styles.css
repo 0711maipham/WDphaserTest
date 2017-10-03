@@ -10,7 +10,25 @@ html, body {
   margin: 0;
   padding: 0;
 }
-.Dash{
-  width: 15%;
-  height: 25%;
+.UserNav{
+  display: inline-block;
+  margin-top: 3%;
+}
+.theUser{
+  columns: 1;
+  column-width: 40%;
+  height: 100%;
+  float: left;
+  
+}
+.Dragon{
+  width: 25%;
+  height: 30%;
+}
+.theDragon{
+  clear: right;
+}
+.User{
+  width: 20%;
+  height: auto;
 }

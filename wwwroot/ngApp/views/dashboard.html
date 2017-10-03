@@ -1,0 +1,44 @@
+<div>
+    <ul>
+        <li class="UserNav"><a href="#">Dashboard</a></li>
+        <li class="UserNav"><a href="#">Profile</a></li>
+        <li class="UserNav"><a href="#">Wander</a></li>
+    </ul>
+</div>
+<div class="theUser">
+    <div><img class="User"src="/images/User.jpg" alt="user"></div>
+   <p>{{controller.user.DisplayName}}</p>
+   <p>User Stats</p>
+   <div>
+        <ul>
+            <li>Joined On: {{controller.user.JoinDate}}</li>
+            <li>Home: {{controller.user.HomeTown}}</li>
+        </ul>
+   </div>
+   <p>WanderFriends {number}</p>
+   <div>
+       <p>Firend1</p>
+       <p>Friend2</p>
+   </div>
+</div>
+<div class="theDragon">
+    <div>
+       <p>Welcome Back {{controller.user.DisplayName}}!!!</p> 
+    </div>
+    <div>
+        <img class="Dragon" src="/images/Dragon.jpg" alt="dragon">
+    </div>
+    <div>
+        <p>{{controller.dragonStats.Name}}</p>
+    </div>
+    <p>Dragon Stats</p>
+    <div>
+        <ul>
+            <li>Curent XP: {{controller.dragonStats.XpPoints}}</li>
+            <li>Total Items: {{controller.dragonStats.Items}}</li>
+            <li>Total Miles Travelled: {{controller.dragonStats.Travelled}} KM</li>
+            <li>Age: {{controller.dragonStats.Age}}</li>
+            <li>Total Trips Taken: {{controller.dragonStats.Trips}}</li>
+        </ul>
+    </div>
+</div>
