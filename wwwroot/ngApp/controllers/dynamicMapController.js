@@ -1,52 +1,65 @@
 ﻿class DynamicMapController {
-    constructor($scope) {
+    constructor($scope, $state, $window) {
+        this.window = $window;
+        this.state = $state;
         this.start = "";
         this.end = "";
         this.markers = [];
-
-        this.origin= { lat: 42.3601, lng: -71.0589 }; //replace with this.origin = dragon.hometown
+        this.radius = 300
+        this.origin = { lat: 42.3601, lng: -71.0589 }; //replace with this.origin = dragon.hometown
 
         let mapElement = document.getElementById('map');
         this.map = new google.maps.Map(mapElement, {
             zoom: 6,
             center: this.origin
-        });     
-        
+        });
+
         google.maps.event.addListener(this.map, 'click', (event) => {
             this.addMarker({
                 coord: event.latLng,
                 content: "Travel here?",
             }, this.map);
-                           
+
             if (this.end == "") {
-                this.end = event.latLng.toString().replace(/[{()}]/g, '');
+                this.end = event.latLng;
                 $scope.$apply();
             };
 
-        }); 
+        });
 
-        let markerDetailList = this.getMarkerDetailList();        
+        let markerDetailList = this.getMarkerDetailList();
         markerDetailList.forEach((markerDetail) => {
             this.addMarker(markerDetail, this.map);
-        });  
+        });
     }
 
     travelCheck(destination) {
-        var x = destination.split(',').map(Number);
-        var lat1 = this.origin.lat;
-        var lon1 = this.origin.lng;
-        var lat2 = x[0];
-        var lon2 = x[1];
-        var p = 0.017453292519943295;    // Math.PI / 180
-        var c = Math.cos;
-        var a = 0.5 - c((lat2 - lat1) * p)/2 + 
-                c(lat1 * p) * c(lat2 * p) * 
-                (1 - c((lon2 - lon1) * p))/2;
-      
-        var y = 12742 * Math.asin(Math.sqrt(a)); // 2 * R; R = 6371 km
-        return y;
-      }
-    
+        if (confirm("Is this where we're going today?") == true) {
+            var x = destination.toString().replace(/[{()}]/g, '').split(',').map(Number);
+            var lat1 = this.origin.lat;
+            var lon1 = this.origin.lng;
+            var lat2 = x[0];
+            var lon2 = x[1];
+            var p = 0.017453292519943295;    // Math.PI / 180
+            var c = Math.cos;
+            var a = 0.5 - c((lat2 - lat1) * p) / 2 +
+                c(lat1 * p) * c(lat2 * p) *
+                (1 - c((lon2 - lon1) * p)) / 2;
+
+            var y = 12742 * Math.asin(Math.sqrt(a)); // 2 * R; R = 6371 km
+            if (y>this.radius) {
+                this.window.alert("That's a bit too far, isn't it? :(");
+                this.state.reload();
+            }
+            else {
+                this.state.reload();
+            }
+        }
+        else {
+            this.state.reload();
+        }
+    }
+
     addMarker(markerDetail, map) {
         var marker = new google.maps.Marker({
             position: markerDetail.coord,
@@ -70,7 +83,7 @@
 
         this.markers.push(marker);
     }
-    
+
     getMarkerDetailList() {
         return [
             {
