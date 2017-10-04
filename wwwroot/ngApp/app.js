@@ -61,11 +61,6 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
             templateUrl: "/ngApp/views/dashboard.html",
             controller: DashboardController,
             controllerAs: "controller"
-        }).state("part9", {
-            url: "/part9",
-            templateUrl: "/ngApp/views/part9.html",
-            controller: AboutController,
-            controllerAs: "controller"
         });
 
     // Handle request for non-existent route
